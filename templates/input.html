@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        .comment-title {
+            font-size: 14px;
+            margin: 6px 0px 2px 4px;
+        }
+
+        .comment-body {
+            font-size: 14px;
+            color: #ccc;
+            font-style: italic;
+            border-bottom: dashed 1px #ccc;
+            margin: 4px;
+        }
+    </style>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/js/my-login.js"></script>
+
+    <script type="text/javascript" src="/js/cookies.js"></script>
+<body>
+
+    <div style="margin:20px;">
+        <div style="font-size:16px;font-weight:bold;">Your Comment</div>
+        <div style="padding:6px;">
+            Nick Name: <br/>
+            <input id="name" type="text" style="width:300px;"/>
+        </div>
+        <div style="padding:6px;">
+            Comment: <br/>
+            <textarea id="comment" style="height:100px; width:300px;"></textarea>
+        </div>
+        <div style="padding-left:230px;">
+            <input type="button" id="but" value="post" style="padding:4px 0px; width:80px;"/>
+        </div>
+        <div style="border-bottom:solid 1px #fff;margin-top:10px;">
+            <div style="font-size:16px;font-weight:bold;">Comments</div>
+        </div>
+    </div>
+    <div>
+        <h1>
+            <span id="result">
+                Try this one : "script>alert('hello')</script"
+            </span>
+        </h1>
+    </div>
+
+<script>
+     $(document).ready(function () {
+            $("#but").click(function () {
+               data = $('#comment').val();
+                console.log(data);
+                $('#result').append(data);
+
+            })
+     })
+</script>
+
+
+</body>
+</html>
