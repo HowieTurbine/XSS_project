@@ -27,7 +27,7 @@ def demo3():
 def list_word():
     if request.method == 'POST':
         data = request.get_data()
-
+        
         print(data)
         return data
 

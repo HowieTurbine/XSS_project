@@ -84,5 +84,8 @@ $(function () {
             event.stopPropagation();
         }
         form.addClass('was-validated');
+
+        //Submit
+        $.post('/list',$(form).serialize())
     });
 });
