@@ -18,17 +18,17 @@ def demo1():
     return render_template('input.html')
 
 
-@app.route('/demo3', methods=['GET', 'POST'])
-def demo3():
+@app.route('/demo2', methods=['GET', 'POST'])
+def demo2():
     return render_template('login.html')
 
 
-@app.route('/demo3_2', methods=['GET', 'POST'])
-def demo3_2():
+@app.route('/demo2_2', methods=['GET', 'POST'])
+def demo2_2():
     return render_template('fake_website.html')
 
 
-@app.route('/list', methods=['GET', 'POST'])
+@app.route('/save', methods=['GET', 'POST'])
 def save_cookie():
     if request.method == 'POST':
         print(request.form)
